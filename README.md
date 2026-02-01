@@ -1,0 +1,46 @@
+# Benbentwo's Claude Marketplace
+
+Personal collection of Claude Code plugins for documentation, development workflows, and productivity.
+
+## Installation
+
+Add this marketplace to Claude Code:
+
+```shell
+/plugin marketplace add Benbentwo/benbentwos-claude-marketplace
+```
+
+Or for local development:
+
+```shell
+/plugin marketplace add /path/to/benbentwos-claude-marketplace
+```
+
+## Available Plugins
+
+### feature-changelog
+
+Helps maintain FEATURES.md and CHANGELOG.md documentation during development tasks.
+
+```shell
+/plugin install feature-changelog@benbentwos-claude-marketplace
+```
+
+**Features:**
+- **Automatic guidance**: When FEATURES.md or CHANGELOG.md exists in your project, Claude will update them as part of completing development tasks
+- **Manual updates**: Use `/update-docs` to catch up documentation based on current session work
+- **Project scaffolding**: Use `/init-docs` to create FEATURES.md and CHANGELOG.md with project-aware content
+
+## Contributing
+
+To add a new plugin:
+
+1. Create a directory under `plugins/`
+2. Add a `.claude-plugin/plugin.json` manifest
+3. Add your commands, skills, agents, or hooks
+4. Update the marketplace.json to include your plugin
+5. Run `/plugin validate .` to verify the structure
+
+## License
+
+MIT

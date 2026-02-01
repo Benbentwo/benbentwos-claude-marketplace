@@ -1,0 +1,26 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "benbentwos-claude-marketplace",
+  "description": "Personal collection of Claude Code plugins for documentation, development workflows, and productivity",
+  "owner": {
+    "name": "Benjamin Smith",
+    "email": "ben@benbentwo.dev"
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "feature-changelog",
+      "source": "./plugins/feature-changelog",
+      "description": "Helps maintain FEATURES.md and CHANGELOG.md documentation during development tasks",
+      "version": "1.0.0",
+      "author": {
+        "name": "Benjamin Smith"
+      },
+      "category": "documentation",
+      "keywords": ["documentation", "features", "changelog", "project-docs"]
+    }
+  ]
+}

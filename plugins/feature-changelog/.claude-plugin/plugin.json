@@ -1,0 +1,9 @@
+{
+  "name": "feature-changelog",
+  "version": "1.0.0",
+  "description": "Helps maintain FEATURES.md and CHANGELOG.md documentation during development tasks",
+  "author": {
+    "name": "Benjamin Smith"
+  },
+  "keywords": ["documentation", "features", "changelog", "project-docs"]
+}
