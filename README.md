@@ -31,6 +31,21 @@ Helps maintain FEATURES.md and CHANGELOG.md documentation during development tas
 - **Manual updates**: Use `/update-docs` to catch up documentation based on current session work
 - **Project scaffolding**: Use `/init-docs` to create FEATURES.md and CHANGELOG.md with project-aware content
 
+### unreal-engine
+
+Helps Claude work effectively with Unreal Engine 5 projects - start/stop editor, manage builds, analyze logs, and debug issues.
+
+```shell
+/plugin install unreal-engine@benbentwos-claude-marketplace
+```
+
+**Features:**
+- **Engine control**: `/ue:start`, `/ue:stop`, `/ue:rebuild` commands for managing the editor lifecycle
+- **Log intelligence**: `/ue:logs` to view and tail UE5 log files, knows log locations on all platforms
+- **Auto-detection**: SessionStart hook detects UE5 projects and provides context
+- **Development assistant**: Agent for managing build-test-debug cycles during feature development
+- **Cross-platform**: Supports macOS, Windows, and Linux
+
 ## Contributing
 
 To add a new plugin:
