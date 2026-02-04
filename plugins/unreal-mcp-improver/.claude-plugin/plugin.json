@@ -1,0 +1,9 @@
+{
+  "name": "unreal-mcp-improver",
+  "version": "1.0.0",
+  "description": "Automatically detects, logs, and fixes SadTire MCP limitations in the background while users continue their main work",
+  "author": {
+    "name": "Benjamin Smith"
+  },
+  "keywords": ["mcp", "model-context-protocol", "automation", "unreal-engine", "sadtire"]
+}

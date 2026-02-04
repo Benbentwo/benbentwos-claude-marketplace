@@ -1,0 +1,27 @@
+{
+  "description": "Detects MCP tool failures and offers to spawn improvement agents",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "mcp__sadtireMCP__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/detect-mcp-failure.sh",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__unreal-handshake__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/detect-mcp-failure.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
