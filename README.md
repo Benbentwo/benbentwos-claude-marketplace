@@ -46,6 +46,20 @@ Helps Claude work effectively with Unreal Engine 5 projects - start/stop editor,
 - **Development assistant**: Agent for managing build-test-debug cycles during feature development
 - **Cross-platform**: Supports macOS, Windows, and Linux
 
+### unreal-mcp-improver
+
+Automatically detects, logs, and fixes SadTire MCP limitations in the background while you continue your main work.
+
+```shell
+/plugin install unreal-mcp-improver@benbentwos-claude-marketplace
+```
+
+**Features:**
+- **Gap detection**: Skill that recognizes when MCP tools can't do what you need
+- **Background implementation**: `/mcp-improve` command spawns agents to implement improvements without interrupting your work
+- **Failure detection**: PostToolUse hook monitors MCP tool calls for errors and offers fixes
+- **Progress tracking**: Maintains a log of requested and completed improvements in `SadTire_MCP/docs/mcp-improvements.md`
+
 ## Contributing
 
 To add a new plugin:

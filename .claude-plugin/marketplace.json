@@ -32,6 +32,17 @@
       },
       "category": "game-development",
       "keywords": ["unreal-engine", "ue5", "game-development", "ubt", "blueprints"]
+    },
+    {
+      "name": "unreal-mcp-improver",
+      "source": "./plugins/unreal-mcp-improver",
+      "description": "Automatically detects, logs, and fixes SadTire MCP limitations in the background while users continue their main work",
+      "version": "1.0.0",
+      "author": {
+        "name": "Benjamin Smith"
+      },
+      "category": "mcp",
+      "keywords": ["mcp", "model-context-protocol", "automation", "unreal-engine", "sadtire"]
     }
   ]
 }
