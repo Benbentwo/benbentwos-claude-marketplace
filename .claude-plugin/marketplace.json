@@ -32,6 +32,20 @@
       },
       "category": "mcp",
       "keywords": ["mcp", "model-context-protocol", "automation", "unreal-engine", "sadtire"]
+    },
+    {
+      "name": "uem",
+      "source": {
+        "source": "github",
+        "repo": "Benbentwo/ue5"
+      },
+      "description": "Unreal Editor Manager - editor lifecycle management, AI-driven rebuilds, log analysis, and MCP integration for UE5",
+      "version": "1.0.0",
+      "author": {
+        "name": "Benjamin Smith"
+      },
+      "category": "unreal-engine",
+      "keywords": ["unreal-engine", "ue5", "editor", "builds", "mcp", "server-daemon", "logs"]
     }
   ]
 }

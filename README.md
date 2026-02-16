@@ -31,20 +31,22 @@ Helps maintain FEATURES.md and CHANGELOG.md documentation during development tas
 - **Manual updates**: Use `/update-docs` to catch up documentation based on current session work
 - **Project scaffolding**: Use `/init-docs` to create FEATURES.md and CHANGELOG.md with project-aware content
 
-### unreal-engine
+### uem (Unreal Editor Manager)
 
-Helps Claude work effectively with Unreal Engine 5 projects - start/stop editor, manage builds, analyze logs, and debug issues.
+Editor lifecycle management, AI-driven rebuilds, log analysis, and MCP integration for UE5 projects. Wraps the [ue5 CLI](https://github.com/Benbentwo/ue5) server daemon.
 
 ```shell
-/plugin install unreal-engine@benbentwos-claude-marketplace
+/plugin install uem@benbentwos-claude-marketplace
 ```
 
 **Features:**
-- **Engine control**: `/ue:start`, `/ue:stop`, `/ue:rebuild` commands for managing the editor lifecycle
-- **Log intelligence**: `/ue:logs` to view and tail UE5 log files, knows log locations on all platforms
-- **Auto-detection**: SessionStart hook detects UE5 projects and provides context
-- **Development assistant**: Agent for managing build-test-debug cycles during feature development
-- **Cross-platform**: Supports macOS, Windows, and Linux
+- **Editor control**: `/uem:start`, `/uem:stop` to launch and stop managed editor instances
+- **AI-driven rebuilds**: `/uem:rebuild` triggers daemon-orchestrated stop-build-restart with metadata tracking
+- **Log intelligence**: `/uem:logs` queries captured logs with filtering by level, category, pattern, and time
+- **Server management**: `/uem:server` manages the background daemon
+- **Multi-agent coordination**: Automatic build coalescing when multiple agents request rebuilds
+- **MCP integration**: Push notifications to connected agents via SSE
+- **Development assistant**: Agent for autonomous build-test-debug cycles
 
 ### unreal-mcp-improver
 
