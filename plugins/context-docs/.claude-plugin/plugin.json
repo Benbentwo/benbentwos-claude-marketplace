@@ -1,0 +1,9 @@
+{
+  "name": "context-docs",
+  "version": "0.1.0",
+  "description": "Automatically generate and maintain feature context documents that capture development knowledge — what was built, where changes live, how it works, and why — so future AI sessions can quickly pick up where you left off.",
+  "author": {
+    "name": "benbentwos"
+  },
+  "keywords": ["context", "documentation", "feature-tracking", "knowledge-capture", "onboarding"]
+}

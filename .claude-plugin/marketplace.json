@@ -57,6 +57,17 @@
       },
       "category": "workflow",
       "keywords": ["prd", "requirements", "documentation", "planning", "feature-development"]
+    },
+    {
+      "name": "context-docs",
+      "source": "./plugins/context-docs",
+      "description": "Automatically generate and maintain feature context documents that capture development knowledge so future AI sessions can quickly pick up where you left off",
+      "version": "0.1.0",
+      "author": {
+        "name": "Benjamin Smith"
+      },
+      "category": "documentation",
+      "keywords": ["context", "documentation", "feature-tracking", "knowledge-capture", "onboarding"]
     }
   ]
 }
