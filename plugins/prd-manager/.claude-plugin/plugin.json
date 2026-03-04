@@ -1,0 +1,9 @@
+{
+  "name": "prd-manager",
+  "version": "0.1.0",
+  "description": "Manage Product Requirements Documents (PRDs) to gate feature development behind structured requirements, track implementation status, and maintain a living reference of all planned and delivered features.",
+  "author": {
+    "name": "benbentwos"
+  },
+  "keywords": ["prd", "requirements", "documentation", "planning", "feature-development", "workflow"]
+}
