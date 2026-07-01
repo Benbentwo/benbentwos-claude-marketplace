@@ -48,15 +48,15 @@
       "keywords": ["unreal-engine", "ue5", "editor", "builds", "mcp", "server-daemon", "logs"]
     },
     {
-      "name": "prd-manager",
-      "source": "./plugins/prd-manager",
-      "description": "Manage Product Requirements Documents (PRDs) to gate feature development behind structured requirements and track implementation status",
-      "version": "0.1.0",
+      "name": "prd-management",
+      "source": "./plugins/prd-management",
+      "description": "PRD-driven development: living per-feature specs with status tracking, an INDEX board, and impact analysis to find which existing features a change might break. Supersedes prd-manager.",
+      "version": "0.2.0",
       "author": {
         "name": "Benjamin Smith"
       },
       "category": "workflow",
-      "keywords": ["prd", "requirements", "documentation", "planning", "feature-development"]
+      "keywords": ["prd", "requirements", "documentation", "planning", "feature-development", "impact-analysis", "regression"]
     },
     {
       "name": "context-docs",

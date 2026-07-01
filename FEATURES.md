@@ -27,6 +27,31 @@ Helps maintain FEATURES.md and CHANGELOG.md documentation during development tas
 - **FEATURES.md**: User-facing feature descriptions organized by category
 - **CHANGELOG.md**: Developer-focused change tracking following [Keep a Changelog](https://keepachangelog.com/) format
 
+### prd-management
+
+PRD-driven development: living per-feature product specs written from the end user's perspective, with status tracking and impact analysis. Supersedes `prd-manager`.
+
+#### Living Specs
+- **Per-Feature PRDs**: One evolving spec per feature under `docs/prds/` (configurable), covering user goals, behaviors, acceptance criteria, assumptions, and constraints
+- **Append-Only History**: Edge cases, open questions, future considerations, and a changelog grow over time instead of being overwritten — the doc is a living artifact, not a static file
+- **Status Board**: `INDEX.md` plus a `draft → review → approved → in-progress → implemented` lifecycle
+
+#### Impact Analysis
+- **`/prd-check`**: Given a new feature or change, finds which existing features it might affect or break by matching subsystem `touches` tags, then emits a regression checklist to verify against
+- **Guards Against Silent Regressions**: Surfaces the acceptance criteria and edge cases of affected features before you change code
+
+#### Commands
+- **`/prd-new`**: Scaffold a living PRD, approve, and hand off to planning
+- **`/prd-list`**: Show the INDEX status board
+- **`/prd-update`**: Append edge cases, resolve questions, advance status, update implementation progress
+- **`/prd-review`**: Audit a PRD for vague criteria, stale questions, and missing edge cases
+- **`/prd-check`**: Impact / regression analysis
+
+#### Auto-Capture (Hooks)
+- **Feature-Request Detection**: A self-gating `UserPromptSubmit` hook nudges a draft PRD + impact check when a message is a genuine feature request
+- **Plan Capture**: After an approved plan, folds newly-decided user-facing requirements into the matching PRD
+- **Portable**: Prompt-based hooks (no scripts) work on Windows and macOS; configurable doc location via `.claude/prd.local.md`
+
 ### uem (Unreal Editor Manager)
 
 Wraps the [ue5 CLI](https://github.com/Benbentwo/ue5) server daemon for AI-driven UE5 development.
