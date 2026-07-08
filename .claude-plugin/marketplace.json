@@ -68,6 +68,17 @@
       },
       "category": "documentation",
       "keywords": ["context", "documentation", "feature-tracking", "knowledge-capture", "onboarding"]
+    },
+    {
+      "name": "clarify-interview",
+      "source": "./plugins/clarify-interview",
+      "description": "Interviews you one question at a time about ambiguity during design and planning, prioritizing questions whose answer would change the architecture",
+      "version": "0.1.0",
+      "author": {
+        "name": "Benjamin Smith"
+      },
+      "category": "workflow",
+      "keywords": ["planning", "design", "brainstorming", "requirements", "architecture", "workflow"]
     }
   ]
 }
