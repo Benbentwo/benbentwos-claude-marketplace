@@ -19,6 +19,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
   - `clarifying-interview` skill - auto-triggers on design/planning language; asks one question at a time, prioritizing architecture-changing questions
   - `/interview` command - deliberately start the interview on any topic
   - `UserPromptSubmit` hook - detects planning intent and nudges Claude into the interview
+- **decision-maker plugin** (v0.1.0) - Autonomous decision-making during implementation
+  - Stop hook - redirects non-destructive, non-architectural mid-build questions into logged decisions instead of stopping to ask
+  - `decision-maker` skill - log format, conservative-choice rule, escape hatch, doc-location discovery, plan seeding
+  - `/decisions-start` command - create the decision log and arm decide-and-continue
 
 ## [1.0.0] - 2026-02-01
 
