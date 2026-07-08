@@ -1,0 +1,9 @@
+{
+  "name": "clarify-interview",
+  "version": "0.1.0",
+  "description": "Interviews you one question at a time about ambiguity during design and planning, prioritizing questions whose answer would change the architecture, so the plan is solid before any code is written.",
+  "author": {
+    "name": "Benjamin Smith"
+  },
+  "keywords": ["planning", "design", "brainstorming", "requirements", "architecture", "workflow"]
+}

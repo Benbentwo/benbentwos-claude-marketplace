@@ -1,0 +1,9 @@
+{
+  "name": "decision-maker",
+  "version": "0.1.0",
+  "description": "Makes Claude an autonomous decision-maker during implementation: when the plan doesn't cover something, it picks the conservative non-destructive option and logs it under Deviations instead of stopping to ask — only pausing for destructive or architecture-altering forks.",
+  "author": {
+    "name": "Benjamin Smith"
+  },
+  "keywords": ["implementation", "autonomy", "decisions", "deviations", "workflow", "notes"]
+}

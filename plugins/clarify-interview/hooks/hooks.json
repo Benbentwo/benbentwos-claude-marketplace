@@ -1,0 +1,16 @@
+{
+  "description": "Detects design/planning intent and nudges Claude to run the clarifying-interview architectural-triage interview",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Decide whether the user's prompt ($USER_PROMPT) is starting design, planning, architecture, or scoping work on something new or non-trivial (e.g. 'let's build/design/plan/architect X', 'how should I structure X', 'I want to add X'). If it is NOT such a prompt (it's a small edit, a question, debugging, or continuing already-settled work), add no context and return nothing. If it IS design/planning intent, add this guidance as context for the assistant: 'Before proposing a design or writing code, use the clarifying-interview skill: interview the user ONE question at a time about anything ambiguous, prioritizing questions whose answer would change the architecture; offer multiple-choice options with a recommendation; then write Decisions and Assumptions into the plan.' Do not block the prompt."
+          }
+        ]
+      }
+    ]
+  }
+}

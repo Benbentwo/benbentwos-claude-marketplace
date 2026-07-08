@@ -68,6 +68,28 @@
       },
       "category": "documentation",
       "keywords": ["context", "documentation", "feature-tracking", "knowledge-capture", "onboarding"]
+    },
+    {
+      "name": "clarify-interview",
+      "source": "./plugins/clarify-interview",
+      "description": "Interviews you one question at a time about ambiguity during design and planning, prioritizing questions whose answer would change the architecture",
+      "version": "0.1.0",
+      "author": {
+        "name": "Benjamin Smith"
+      },
+      "category": "workflow",
+      "keywords": ["planning", "design", "brainstorming", "requirements", "architecture", "workflow"]
+    },
+    {
+      "name": "decision-maker",
+      "source": "./plugins/decision-maker",
+      "description": "Autonomous implementation decisions: picks the conservative non-destructive option and logs it under Deviations instead of stopping to ask, pausing only for destructive or architecture-altering forks",
+      "version": "0.1.0",
+      "author": {
+        "name": "Benjamin Smith"
+      },
+      "category": "workflow",
+      "keywords": ["implementation", "autonomy", "decisions", "deviations", "workflow", "notes"]
     }
   ]
 }
