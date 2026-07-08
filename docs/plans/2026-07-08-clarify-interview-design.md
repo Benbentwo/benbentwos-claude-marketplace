@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-08
 **Status:** Approved (brainstorm), pending implementation plan
-**Companion plugin:** [implementation-notes](2026-07-08-implementation-notes-design.md)
+**Companion plugin:** [decision-maker](2026-07-08-decision-maker-design.md)
 
 ## Origin
 
@@ -21,8 +21,9 @@ change the architecture — so the plan is solid before any code is written.
 This is the first half of a two-plugin workflow:
 
 - **`clarify-interview`** (this plugin) — resolve knowns/unknowns up front.
-- **`implementation-notes`** — during the build, log the *unknown* unknowns
-  that surface, choosing the conservative option instead of stopping to ask.
+- **`decision-maker`** — during the build, make the call on *unknown* unknowns
+  that surface, choosing the conservative option and logging it instead of
+  stopping to ask.
 
 The shared goal is **fewer round-trips**: interrupt up front where it is cheap,
 avoid interrupting mid-build.
@@ -92,13 +93,13 @@ distinct niche**:
 The skill description will stake out this niche so it complements rather than
 duplicates brainstorming.
 
-## Coupling to implementation-notes
+## Coupling to decision-maker
 
 Awareness, not dependency (independent-but-aware):
 
 - Neither plugin requires the other.
 - `clarify-interview`'s output (decisions + open assumptions written into the
-  plan/spec) is what `implementation-notes` opportunistically reads if present.
+  plan/spec) is what `decision-maker` opportunistically reads if present.
 
 ## Out of scope (YAGNI)
 
