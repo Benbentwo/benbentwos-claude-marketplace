@@ -1,0 +1,16 @@
+{
+  "description": "During an active implementation (a decision log exists), redirects would-be mid-build clarifying questions into conservative logged decisions instead of stopping to ask",
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "You are gating whether the assistant may stop.\n\nStep 1 (activation gate): Determine whether an active implementation decision log was established this session — a file named implementation-notes-<datetime>.md was created via /decisions-start or on plan approval, and the assistant is executing an approved plan. If NO such active log exists, return {\"decision\": \"approve\"} and stop — this hook must be a silent no-op outside an active build.\n\nStep 2 (only if a log is active): Determine why the assistant is stopping. If it is finishing legitimately (the planned work is complete, or it already asked and is awaiting an answer), return {\"decision\": \"approve\"}.\n\nStep 3: If the assistant is stopping to ASK the user a mid-build clarifying question because the plan did not cover something, classify that question:\n- If answering it would require a DESTRUCTIVE or IRREVERSIBLE action with no safe default (data loss, irreversible migration, deleting user work, force-push, spending money), OR the surprise is ARCHITECTURE-ALTERING (a genuine fork changing the data model, protocol, or a system boundary) — return {\"decision\": \"approve\"} so the question reaches the user.\n- Otherwise (a small, reversible, non-architectural choice) — return {\"decision\": \"block\", \"reason\": \"Do not stop to ask. Pick the recommended non-destructive, reversible option, append a Deviations entry to the active implementation-notes log (what surfaced, what you chose, why it is conservative), and continue implementing.\"}.\n\nReturn only the JSON decision object."
+          }
+        ]
+      }
+    ]
+  }
+}
