@@ -1,0 +1,9 @@
+{
+  "name": "concise-tldr",
+  "version": "0.1.0",
+  "description": "An output style for terse, scannable updates in a what-changed / where-we're-at / what's-next form, written for someone who steps away mid-session and reads on re-entry.",
+  "author": {
+    "name": "Benjamin Smith"
+  },
+  "keywords": ["output-style", "communication", "status-updates", "concise", "workflow"]
+}

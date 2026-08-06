@@ -62,6 +62,21 @@ Automatically detects, logs, and fixes SadTire MCP limitations in the background
 - **Failure detection**: PostToolUse hook monitors MCP tool calls for errors and offers fixes
 - **Progress tracking**: Maintains a log of requested and completed improvements in `SadTire_MCP/docs/mcp-improvements.md`
 
+### concise-tldr
+
+An output style for terse, scannable replies — built for the person who kicks off work, goes and does something else, and comes back to read what happened.
+
+```shell
+/plugin install concise-tldr@benbentwos-claude-marketplace
+```
+
+**Features:**
+- **Three-bullet updates**: every status or completion report is exactly *what changed* / *where we're at* / *what's next*
+- **Conditional fourth bullet**: *Lessons learned* appears only when the work surfaced a real gotcha, so it never decays into ritual
+- **Precision preserved**: full sentences with exact SHAs, paths, and error text — brevity never costs a follow-up question
+- **Coding instructions retained**: sets `keep-coding-instructions: true`, so it changes how Claude communicates, not how it works
+- **Opt-in**: select it under `/config` → Output style; enabling the plugin won't override a style you already chose
+
 ## Contributing
 
 To add a new plugin:
