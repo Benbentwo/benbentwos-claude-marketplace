@@ -54,3 +54,20 @@ Wraps the [ue5 CLI](https://github.com/Benbentwo/ue5) server daemon for AI-drive
 - **Autonomous Build Cycles**: Manages build-test-debug workflow
 - **Error Pattern Recognition**: Identifies compile errors, blueprint errors, assertions, crashes
 - **Build Mode Selection**: Automatically chooses full vs hot_reload based on changed files
+
+### concise-tldr
+
+An output style for terse, scannable replies, built for the person who kicks off work, does something else, and comes back to read what happened.
+
+#### Structured Updates
+- **Three-Bullet Format**: Every status or completion report is exactly *what changed* / *where we're at* / *what's next*
+- **Conditional Lessons**: A fourth *Lessons learned* bullet appears only when the work surfaced a real gotcha, so it never becomes ritual
+- **Outcome First**: Replies lead with the one-line result, with no narration between tool calls
+
+#### Brevity Without Loss
+- **Precision Preserved**: Full sentences keep exact SHAs, file paths, build verdicts, and error text intact
+- **Detail On Demand**: Expands only when asked or at a genuine decision point
+
+#### Safe Defaults
+- **Coding Behavior Unchanged**: Sets `keep-coding-instructions: true`, so only communication changes
+- **Opt-In**: Selected under `/config`; enabling the plugin never overrides an output style you already chose

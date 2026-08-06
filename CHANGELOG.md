@@ -23,6 +23,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
   - Stop hook - redirects non-destructive, non-architectural mid-build questions into logged decisions instead of stopping to ask
   - `decision-maker` skill - log format, conservative-choice rule, escape hatch, doc-location discovery, plan seeding
   - `/decisions-start` command - create the decision log and arm decide-and-continue
+- **concise-tldr plugin** (v0.1.0) - Output style for terse, scannable updates aimed at a reader who steps away mid-session
+  - `Concise TLDR` output style - every status or completion report is exactly three labeled bullets (*what changed* / *where we're at* / *what's next*), with a conditional fourth *Lessons learned* bullet that appears only when the work surfaced a real gotcha
+  - Sets `keep-coding-instructions: true`, so the style changes how Claude communicates without dropping Claude Code's built-in software-engineering instructions
+  - Deliberately omits `force-for-plugin`: the style is opt-in via `/config`, so enabling the plugin never overrides a user's existing `outputStyle`
 
 ## [1.0.0] - 2026-02-01
 
