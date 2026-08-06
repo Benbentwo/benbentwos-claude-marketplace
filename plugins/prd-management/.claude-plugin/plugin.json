@@ -1,0 +1,9 @@
+{
+  "name": "prd-management",
+  "version": "0.2.0",
+  "description": "PRD-driven development: maintains living, per-feature product specs (user goals, behaviors, success criteria, edge cases, open questions) with status tracking, an INDEX board, and impact analysis to find which existing features a new change might break. Supersedes prd-manager.",
+  "author": {
+    "name": "Benjamin Smith"
+  },
+  "keywords": ["prd", "requirements", "documentation", "planning", "feature-development", "workflow", "impact-analysis", "regression"]
+}

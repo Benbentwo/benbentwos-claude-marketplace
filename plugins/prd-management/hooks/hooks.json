@@ -1,0 +1,29 @@
+{
+  "description": "PRD auto-capture: detect feature requests in user prompts and fold approved plans into the living PRD. Prompt-based (no scripts) so it is portable across OSes. Active whenever the prd-management plugin is enabled.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "You are a lightweight gate for PRD-driven development. Look at the user's message: $USER_PROMPT\n\nDecide ONLY whether this message is a NEW FEATURE or BEHAVIOR REQUEST — i.e. the user is asking to build, add, or change a user-facing capability (e.g. 'build a round timer HUD', 'players should be jailed when tagged', 'add a spectator mode').\n\nIt is NOT a feature request if it is: a question, a bug report/triage, a refactor or code-cleanup, a continuation ('yes', 'continue', 'go on'), a docs/tooling/config task, a git/build/deploy request, or anything conversational. When in doubt, treat it as NOT a feature request.\n\n- If it is NOT a feature request: output nothing and take no action. Do not mention PRDs. Stay completely silent.\n- If it IS a feature request: emit a brief systemMessage instructing the assistant to, BEFORE writing implementation code, invoke the `manage-prd` skill to (1) scaffold or update a living PRD at `draft` status capturing the user's goals, expected behaviors, and success criteria from this message (resolve the PRD dir from `.claude/prd.local.md` `prd_dir` or default `docs/prds/`), and (2) run PRD impact analysis (`/prd-check`) to surface which existing features this change might affect. Keep it a suggestion the assistant acts on naturally — do not block the turn.",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "ExitPlanMode",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "A plan was just submitted for approval. After the user approves, and BEFORE implementation, fold any newly-decided user-facing requirements into the living PRD: invoke the `manage-prd` skill, find the matching PRD under the resolved PRD dir (`.claude/prd.local.md` `prd_dir` or default `docs/prds/`), and via surgical append-only edits record any new behaviors, success criteria, edge cases discovered during planning, and resolved open questions — each with a dated Changelog line and an updated `updated:` date. If no PRD exists for this feature yet, offer to scaffold one with `/prd-new`. Do NOT duplicate the design/implementation detail that belongs in `docs/plans/` — capture only the user-facing what/why. Do not ask for confirmation for pure appends; announce what you recorded.",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

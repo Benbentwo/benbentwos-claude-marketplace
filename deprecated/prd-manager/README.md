@@ -1,5 +1,11 @@
 # PRD Manager
 
+> **⚠️ DEPRECATED — superseded by [`prd-management`](../../plugins/prd-management/).**
+> `prd-management` carries forward this plugin's status lifecycle and INDEX board, and adds
+> living append-only sections (edge cases, open questions, changelog), dedicated impact
+> analysis (`/prd-check`), auto-capture hooks, and configurable doc location. This copy is
+> retained for reference only and is no longer listed in the marketplace.
+
 Manage Product Requirements Documents (PRDs) to gate feature development behind structured requirements. PRDs serve as the source of truth for feature requirements, user goals, and implementation status.
 
 ## Features
